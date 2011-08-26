@@ -19,8 +19,13 @@ adding this to your `Rakefile`
     require 'sinatra/activerecord/rake'
 
     $ rake -T
+    rake db:create            # Create the database from config/database.yml for the current RACK_ENV (use db:create:all to create all dbs in the con...
     rake db:create_migration  # create an ActiveRecord migration in ./db/migrate
+    rake db:drop              # Drops the database for the current RACK_ENV (use db:drop:all to drop all databases)
     rake db:migrate           # migrate your database
+    rake db:reset             # reset database
+    rake db:rollback          # Rolls the schema back to the previous version (specify steps w/ STEP=n).
+    rake db:seed              # Load the seed data from db/seeds.rb
 
 create a migration
 
